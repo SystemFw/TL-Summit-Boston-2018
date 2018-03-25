@@ -1,5 +1,5 @@
 ---
-title: Declarative program flow with fs2 Streams
+title: Declarative control flow with fs2 Streams
 author: Fabio Labella (SystemFw)
 theme: solarized
 highlightTheme: solarized-light
