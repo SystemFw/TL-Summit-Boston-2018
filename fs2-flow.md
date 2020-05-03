@@ -142,7 +142,7 @@ List.range(1, 100).take(3) ++ List(21, 22)
 
 
 ```scala
-def put(s: String) = IO(println(s))
+def put[A](a: A) = IO(println(a))
 
 Stream.repeatEval(put("hello")).take(3) ++ Stream.eval(put("world"))
 // hello
@@ -164,7 +164,7 @@ List(1,2,3).flatMap(x => List(x,x))
 
 
 ```scala
-def put(s: String) = IO(println(s))
+def put[A](a: A) = IO(println(a))
 
 Stream(1, 2, 3).flatMap(x => Stream.repeatEval(put(x)).take(2))
 // 1
@@ -188,7 +188,7 @@ List(1,2,3).zip(List("a", "b", "c"))
 
 
 ```scala
-def put(s: String) = IO(println(s))
+def put[A](a: A) = IO(println(a))
 
 def printRange = Stream.range(1, 10).evalMap(put)
 
